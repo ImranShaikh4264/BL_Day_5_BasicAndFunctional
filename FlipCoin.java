@@ -1,0 +1,41 @@
+package com.bridgelab.day5.functional;
+
+import java.util.Scanner;
+
+public class FlipCoin {
+	public int flipCoin(int trial) {
+		int isHead = 1;
+		int TotalHead = 0;
+		int numberOfTimesFlip = trial;
+		for (int flip=1; flip<=numberOfTimesFlip; flip++ ) {
+			int coinCheck = (int) (Math.floor(Math.random() * 10) % 2);
+			if ( coinCheck == isHead) 
+				System.out.println("Head");
+			else
+				System.out.println("Tail");
+		
+		TotalHead += coinCheck;
+		}
+		return TotalHead;
+	}
+	public void percentage(int TotalHead,int N) {
+		int timesHead = TotalHead;
+		int timesTail = N - timesHead;
+		int headPercent =(timesHead*100)/N;
+		int tailPercent =(timesTail*100)/N;
+		System.out.println("Number of times head is :"+timesHead+"   And percentage of head is :"+headPercent);
+		System.out.println("Number of times tail is :"+timesTail+"   And percentage of tail is :"+tailPercent);
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Number of Times Flip Coin");
+		int N = sc.nextInt();
+		FlipCoin FC = new FlipCoin();
+		int TotalHead = FC.flipCoin(N);
+		FC.percentage(TotalHead, N);
+		
+		
+	
+	}
+
+}
