@@ -1,7 +1,6 @@
 package com.bridgelab.day5.functional;
 
 import java.util.Scanner;
-
 public class TwoDimentionArray {
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);

@@ -3,7 +3,7 @@ package com.bridgelab.day5.functional;
 import java.util.Scanner;
 
 public class FlipCoin {
-	public int flipCoin(int trial) {
+	public double flipCoin(int trial) {
 		int isHead = 1;
 		int TotalHead = 0;
 		int numberOfTimesFlip = trial;
@@ -18,11 +18,11 @@ public class FlipCoin {
 		}
 		return TotalHead;
 	}
-	public void percentage(int TotalHead,int N) {
-		int timesHead = TotalHead;
-		int timesTail = N - timesHead;
-		int headPercent =(timesHead*100)/N;
-		int tailPercent =(timesTail*100)/N;
+	public void percentage(double TotalHead,int N) {
+		double timesHead = TotalHead;
+		double timesTail = N - timesHead;
+		double headPercent =(timesHead*100)/N;
+		double tailPercent =(timesTail*100)/N;
 		System.out.println("Number of times head is :"+timesHead+"   And percentage of head is :"+headPercent);
 		System.out.println("Number of times tail is :"+timesTail+"   And percentage of tail is :"+tailPercent);
 	}
@@ -31,7 +31,7 @@ public class FlipCoin {
 		System.out.println("Enter Number of Times Flip Coin");
 		int N = sc.nextInt();
 		FlipCoin FC = new FlipCoin();
-		int TotalHead = FC.flipCoin(N);
+		double TotalHead = FC.flipCoin(N);
 		FC.percentage(TotalHead, N);
 		
 		
