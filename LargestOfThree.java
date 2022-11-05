@@ -3,23 +3,32 @@ package com.bridgelab.day5.functional;
 import java.util.Scanner;
 
 public class LargestOfThree {
-	public static void main(String[] args) {
+	public int findLargest() {
+		int largest;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter first number");
-		int N1=sc.nextInt(); 
+		int first=sc.nextInt(); 
 		System.out.println("Enter second number");
-		int N2=sc.nextInt(); 
+		int second=sc.nextInt(); 
 		System.out.println("Enter third number");
-		int N3=sc.nextInt(); 
-	if (N1>N2 && N1>N3) {
+		int third=sc.nextInt(); 
+	if (first>second && first>third) {
 		System.out.println("First number is Largest");
+		largest=first;
 	}
-	else if (N2>N1 && N2>N3) {
-		System.out.println("Second number is Largest");
+	else if (second>first && second>third) {
+		largest=second;
 	}
 	else {
-		System.out.println("Third number is Largest");
+		largest=third;
 	}
-
+	return largest;
+		
+	}
+	public static void main(String[] args) {
+		LargestOfThree large = new LargestOfThree();
+		int Largest=large.findLargest();
+		System.out.println(Largest+" is the Largest number");
+		
 	}
 }
